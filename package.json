@@ -1,0 +1,26 @@
+{
+  "name": "flokhealthwebsite",
+  "version": "1.0.0",
+  "description": "This Playwright automation test framework uses TypeScript to automate [Flok Health](https://www.flok.health/)",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pendragon888/FlokHealthWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pendragon888/FlokHealthWebsite/issues"
+  },
+  "homepage": "https://github.com/pendragon888/FlokHealthWebsite#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
