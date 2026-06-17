@@ -8,7 +8,6 @@ export class LandingPage {
     }
 
     async goto(){
-        await this.page.goto(process.env.BASE_URL+'')
+        await this.page.goto(process.env.BASE_URL!)
     }
-
 }
