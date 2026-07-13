@@ -43,8 +43,28 @@ Steps on how to install dependencies and execute the tests.
     npx playwright test projects.spec.ts
     ```
 
+## Areas of Interest / Suggested Improvements
+
+### data-testid
+Adding the 'data-testid' HTML attribute to uniquely identified elements in the UI would contribute towards the reliability, maintainance, stability and scalability of the automated tests.
+
+### Browser console-errors
+
+Two errors are visible when the browser Developer Tools have been opened:
+
+**_Error updating Webflow analytics: ReferenceError: wf is not defined_**, indicating that the Webflow API is not properly initialised or referenced in the code.
 
 
+**_[CONSENTPRO-CORE] [ERROR] Finsweet Consent Pro is not available for production use. Please purchase a plan at https://my.finsweet.com/plans/create/consent-pro_**, indicates a licensing issue for production use.
+
+![BrowserConsoleErrors](/README_images/Console_errors.jpg)
+
+
+### Mobile Safari (iPhone 12)
+
+When locally running the Mobile Safari test, the Vimeo video player controls are not rendering, hence the test failure. This test helps to identify whether a business criteria needs to be met or that legacy devices don't need to be supported i.e. is the Safari browser on iPhone 12 test a valid scenario?
+
+![MobileSafari](README_images/Failed_test_-_Mobile_Safari_iPhone_12.jpg)
 
 
 
