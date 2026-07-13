@@ -10,7 +10,7 @@ test.describe("Visit For News page for Flok Health", ()=>{
         await expect(newsPage.inTheNewsSection).toContainText('In the news')
     })
 
-    test('Validate number of Recent Highlights is more than one ', async ({ newsPage }) => {
+    test('Validate number of Recent Highlights is more than one', async ({ newsPage }) => {
         await expect(newsPage.recentHighlightsSection).toBeVisible()
         await expect(newsPage.recentHighlightsSection).toContainText('Recent highlights')
         

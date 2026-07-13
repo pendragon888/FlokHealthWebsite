@@ -5,12 +5,12 @@ test.describe("Visit Join The Team page for Flok Health", ()=>{
         await joinTheTeamPage.goto()
     })
 
-    test('Validate Join The Team page present, ', async ({ joinTheTeamPage }) => {
+    test('Validate Join The Team page present', async ({ joinTheTeamPage }) => {
         await expect(joinTheTeamPage.firstHeading).toContainText('Join the Flok');
         await expect(joinTheTeamPage.viewOpenPositions).toContainText('View open positions');
     })
 
-      test('Visit SDET Role, ', async ({ joinTheTeamPage }) => {
+      test('Visit SDET Role', async ({ joinTheTeamPage }) => {
         await expect(joinTheTeamPage.SDET).toBeVisible();
         await expect(joinTheTeamPage.viewOpenPositions).toContainText('View open positions');
     })
