@@ -1,4 +1,4 @@
-import { type Locator, type Page } from "playwright";
+import { type Locator, type Page } from "playwright"
 
 export class NavigationPage {
     readonly page: Page
@@ -19,7 +19,6 @@ export class NavigationPage {
         this.navToAbout = page.getByRole('link', { name: 'About' })
         this.navToJoinTheTeam = page.getByRole('link', { name: 'Join the team' })
         this.navToContactUs = page.getByRole('link', { name: 'Contact us' })
-   
     }
 
     async goto(){
