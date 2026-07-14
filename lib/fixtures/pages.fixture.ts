@@ -1,6 +1,8 @@
 import { NavigationPage } from "@pages/navigation/navigation.page";
 import { LandingPage } from "@pages/landing/landing.page";
 import { ForPatientsPage } from "@pages/forPatients/forPatients.page";
+import { CheckAvailabilityPage } from "@pages/checkAvailability/checkAvailability.page";
+import { YourDetailsPage } from "@pages/checkAvailability/yourDetails.page";
 import { ForOrganisationsPage } from "@pages/forOrganisations/forOrganisations.page";
 import { NewsPage} from '@pages/news/news.page'
 import { AboutPage } from "@pages/about/about.page";
@@ -12,6 +14,8 @@ type MyPages = {
   navigationPage: NavigationPage;
   landingPage: LandingPage;
   forPatientsPage: ForPatientsPage;
+  checkAvailabilityPage: CheckAvailabilityPage;
+  yourDetailsPage: YourDetailsPage;
   forOrganisationsPage: ForOrganisationsPage;
   newsPage: NewsPage;
   aboutPage: AboutPage;
@@ -28,6 +32,12 @@ export const test = baseTest.extend<MyPages>({
   },
     forPatientsPage: async ({ page }, use) => {
     await use(new ForPatientsPage(page));
+  },
+    checkAvailabilityPage: async ({ page }, use) => {
+    await use(new CheckAvailabilityPage(page));
+  },
+    yourDetailsPage: async ({ page }, use) => {
+    await use(new YourDetailsPage(page));
   },
     forOrganisationsPage: async ({ page }, use) => {
     await use(new ForOrganisationsPage(page));
