@@ -1,13 +1,18 @@
 import { test as setup, expect } from '@fixtures/pages.fixture'
 
 setup.describe('Smoke test web application', async () => {
-    setup('Verify each page can be accessed', async ({ landingPage, forPatientsPage, forOrganisationsPage, newsPage, aboutPage, joinTheTeamPage, contactUsPage, page }) => {
+    setup('Verify each page can be accessed', async ({ landingPage, forPatientsPage, forOrganisationsPage, newsPage, aboutPage, joinTheTeamPage, contactUsPage, checkAvailabilityPage, yourDetailsPage, page }) => {
           await landingPage.goto()
           await expect(page).toHaveTitle('Flok Health | AI-Powered Digital Physiotherapy')
           await forPatientsPage.goto()
           await expect(page.getByText('Your recovery from pain starts here.')).toBeVisible()
           await forOrganisationsPage.goto()
           await expect(forOrganisationsPage.firstSection.first()).toBeVisible()
+          await checkAvailabilityPage.goto()
+          await expect(page).toHaveURL('https://clinic.flok.health/self-refer/coverage')
+          await expect(page.getByText('Check availability of Flok Health in your area.')).toBeVisible()
+          await yourDetailsPage.goto()
+          await expect(page).toHaveURL('https://clinic.flok.health/self-refer/EoE_CP_SR')
           await newsPage.goto()
           await expect(newsPage.inTheNewsSection).toContainText('In the news')
           await expect(newsPage.inTheNewsSection).toBeVisible()
