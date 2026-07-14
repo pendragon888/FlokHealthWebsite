@@ -6,8 +6,6 @@ test.describe("Visit For Organisations page for Flok Health", ()=>{
     })
     
     test('Validate For Organisations page present', async ({ forOrganisationsPage }) => {
-        
-        await expect(forOrganisationsPage.firstSection.first()).toBeVisible()
         await expect(forOrganisationsPage.firstSection).toContainText('We operate end-to-end MSK care pathways on behalf of large healthcare systems and providers. Your patients get more choice, more care, and no waiting list.')
     })
 

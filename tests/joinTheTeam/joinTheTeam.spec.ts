@@ -5,8 +5,8 @@ test.describe("Visit Join The Team page for Flok Health", ()=>{
         await joinTheTeamPage.goto()
     })
 
-    test('Validate Join The Team page present', async ({ joinTheTeamPage }) => {
-        await expect(joinTheTeamPage.firstHeading).toContainText('Join the Flok')
+    test('Validate Join The Team page present', async ({ joinTheTeamPage, page }) => {
+        await expect(page.getByText("We're building the world's best community healthcare provider.")).toBeVisible()
         await expect(joinTheTeamPage.viewOpenPositions).toContainText('View open positions')
     })
 

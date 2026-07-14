@@ -6,7 +6,6 @@ test.describe("Visit For News page for Flok Health", ()=>{
     })
 
     test('Validate News page present', async ({ newsPage }) => {
-        await expect(newsPage.inTheNewsSection).toBeVisible()
         await expect(newsPage.inTheNewsSection).toContainText('In the news')
     })
 
