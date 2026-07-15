@@ -60,6 +60,12 @@ Two errors are visible when the browser Developer Tools have been opened:
 ![BrowserConsoleErrors](/README_images/Console_errors.jpg)
 
 
+### Self-Registration
+
+When visiting the webpage directly (https://clinic.flok.health/self-refer/EoE_CP_SR), a 400 status code error is thrown. This could instead redirect back to the Check Availability page (https://clinic.flok.health/self-refer/coverage)
+
+![SelfRegistration](README_images/Registration_-_404_error.jpg)
+
 ### Mobile Safari (iPhone 12)
 
 When locally running the Mobile Safari test, the Vimeo video player controls are not rendering, hence the test failure. This test helps to identify whether a business criteria needs to be met or that legacy devices don't need to be supported i.e. is the Safari browser on iPhone 12 test a valid scenario?
