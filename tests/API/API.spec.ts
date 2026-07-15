@@ -9,7 +9,7 @@ test.describe('API testing', async () => {
         const relativeDir = path.join(__dirname, '../../.temp');
         const fileName = 'gpPracticesFile.json';
         const gpPracticesFile = path.join(relativeDir, fileName);
-        const response = await request.get('https://clinic.flok.health/api/self-refer/pathway?postcode=CB23')
+        const response = await request.get(process.env.API_BASE_URL+'self-refer/pathway?postcode=CB23')
         if (!response.ok()) {
             throw new Error(`Request failed with status ${response.status()}`)
         }
@@ -23,7 +23,7 @@ test.describe('API testing', async () => {
     })
 
     test('GET GP Practices from API without postcode throws 400 status code error', async ({ request }) => {
-        const response = await request.get('https://clinic.flok.health/api/self-refer/pathway?postcode=')
+        const response = await request.get(process.env.API_BASE_URL+'self-refer/pathway?postcode=')
         expect(response.status()).toBe(400)
     })
 })
