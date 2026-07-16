@@ -51,7 +51,7 @@ Steps on how to install dependencies and execute the tests.
 6. To run tests from a specific spec file:
 
     ```bash
-    npx playwright test projects.spec.ts
+    npx playwright test contactUs.spec.ts
     ```
 
 ## Areas of Interest / Suggested Improvements
