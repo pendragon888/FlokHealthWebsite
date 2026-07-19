@@ -73,7 +73,7 @@ Steps on how to install dependencies and execute the tests.
 
 ### Self-Registration
 
-- When visiting the webpage directly (https://clinic.flok.health/self-refer/EoE_CP_SR), a 400 status code error is thrown. This could instead redirect back to the Check Availability page (https://clinic.flok.health/self-refer/coverage)
+- When visiting the webpage directly (https://clinic.flok.health/self-refer/EoE_CP_SR), a 404 status code error is thrown. This could instead redirect back to the Check Availability page (https://clinic.flok.health/self-refer/coverage)
 
 ![SelfRegistration](README_images/Registration_-_404_error.jpg)
 
